@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+	<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+	<a-assets>
+		<a-asset-item id="scene_gltf" src="https://raw.githubusercontent.com/JonCPCC/SGD285-Repo/main/scene.gltf" ></a-asset-item>
+	</a-assets>
+	
+	<!-- 
+	Animation Prefix 
+	"AS_BombardierBeetle_'animation'_SK_Bombardier01" 
+	1. Idle_NC_01
+	2. Attack_AOE
+	3. Attack_Bite_Left
+	4. Attack_Bite_Right
+	5. Attack_BiteBlast
+	6. Attack_Blast
+	7. Basic_Spray_Attack_01
+	8. Death_01_Loop
+	38...
+	-->
+	<a-gltf-model 
+	animation-mixer="clip: AS_BombardierBeetle_Eat_Loop_SK_Bombardier01"
+	position="0 -1 -4" 
+	scale="1 1 1" 
+	rotation="0 315 0"
+	src="#scene_gltf"
+	></a-gltf-model>
+      
+      <a-plane
+        position="0 -1 -4"
+        rotation="-90 0 0"
+        width="6"
+        height="6"
+        color="#212020"
+      ></a-plane>
+	  <a-plane
+        position="0 2 -7"
+        rotation="0 0 0"
+        width="6"
+        height="6"
+        color="#212020"
+      ></a-plane>
+	  <a-plane
+        position="-3 2 -4"
+        rotation="0 90 0"
+        width="6"
+        height="6"
+        color="#212020"
+      ></a-plane>
+      <a-sky color="#000000"></a-sky>
+    </a-scene>
+  </body>
+</html>
